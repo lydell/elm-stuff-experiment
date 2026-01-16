@@ -36,6 +36,8 @@ jobs:
       - if: steps.cache-node_modules.outputs.cache-hit != 'true'
         run: npm ci --no-audit
 
+      - run: ls -ohRS elm-stuff || true
+
       - run: node gen.mjs
 
       - run: time npx elm make --output=/dev/null src/Main.elm
