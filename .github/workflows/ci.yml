@@ -28,6 +28,11 @@ jobs:
           path: ~/.elm
           key: elm-${{ hashFiles('elm.json') }}
 
+      - uses: actions/cache@v4
+        with:
+          path: elm-stuff
+          key: elm-stuff
+
       - if: steps.cache-node_modules.outputs.cache-hit != 'true'
         run: npm ci --no-audit
 
