@@ -38,6 +38,8 @@ jobs:
 
       - run: ls -ohRS elm-stuff || true
 
+      - run: ls -ohRS src || true
+
       - run: node gen.mjs
 
       - run: time npx elm make --output=/dev/null src/Main.elm
