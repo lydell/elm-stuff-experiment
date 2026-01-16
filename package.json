@@ -1,0 +1,6 @@
+{
+    "private": true,
+    "scripts": {
+        "time": "node gen.mjs && rm -rf elm-stuff && time elm make --output=/dev/null src/Main.elm && du -h elm-stuff/0.19.1/* | sort -hr"
+    }
+}
