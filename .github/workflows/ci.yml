@@ -33,4 +33,4 @@ jobs:
 
       - run: node gen.mjs
 
-      - run: time elm make --output=/dev/null src/Main.elm
+      - run: time npx elm make --output=/dev/null src/Main.elm
