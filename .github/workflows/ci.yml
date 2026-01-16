@@ -41,9 +41,8 @@ jobs:
       - run: node gen.mjs
 
       - run: ls -ohRS src || true
-
-      - run: touch -d "2026-01-15 14:30:00" src/*.elm
-
+      - run: touch -r elm-stuff/0.19.1/Slow.elmi src/Slow.elm
+      - run: touch -r elm-stuff/0.19.1/Main.elmi src/Main.elm
       - run: ls -ohRS src || true
 
       - run: time npx elm make --output=/dev/null src/Main.elm
